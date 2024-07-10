@@ -1,6 +1,6 @@
 
 with(Obj_Steam_Networking_List_Slot)
-	instance_destroy()
+  instance_destroy()
 
 steam_lobby_list_add_string_filter("isGameMakerTest","true",steam_lobby_list_filter_eq)
 steam_lobby_list_request()

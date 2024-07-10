@@ -13,8 +13,8 @@ draw_text(50, 100 + _i++ * 30,"steam_get_quota_free: " + string(steam_get_quota_
 
 if(steam_file_exists(STEAM_REMOTESTORAGE_FILE))
 {
-	draw_text(50, 100 + _i++ * 30, "steam_file_size: " + string(steam_file_size(STEAM_REMOTESTORAGE_FILE)))
-	draw_text(50, 100 + _i++ * 30, "steam_file_persisted: " + string(steam_file_persisted(STEAM_REMOTESTORAGE_FILE)))
+  draw_text(50, 100 + _i++ * 30, "steam_file_size: " + string(steam_file_size(STEAM_REMOTESTORAGE_FILE)))
+  draw_text(50, 100 + _i++ * 30, "steam_file_persisted: " + string(steam_file_persisted(STEAM_REMOTESTORAGE_FILE)))
 }
 
 
@@ -24,6 +24,6 @@ draw_text(50, 100 + _i++ * 30, "File list:")
 var files = steam_file_get_list();
 for (var i = 0, len = array_length(files); i < len; ++i)
 {
-	var file = files[i];
-	draw_text(50, 100 + _i++ * 30, file.file_name + " size is " + string(file.file_size))
+  var file = files[i];
+  draw_text(50, 100 + _i++ * 30, file.file_name + " size is " + string(file.file_size))
 }

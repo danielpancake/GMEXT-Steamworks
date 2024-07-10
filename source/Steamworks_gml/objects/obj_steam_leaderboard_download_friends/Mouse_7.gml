@@ -4,4 +4,4 @@
 request = steam_download_friends_scores(SteamLeaderboard)
 
 with(Obj_Steam_Leaderboard_Entry)
-	instance_destroy()
+  instance_destroy()

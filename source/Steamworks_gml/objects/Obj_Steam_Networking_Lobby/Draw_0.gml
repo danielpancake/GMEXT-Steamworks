@@ -14,6 +14,6 @@ draw_text(50,190,"Ping: " + string(rtt_curr) + "ms")
 
 draw_text(50,220,"Players: " + string(steam_lobby_get_member_count()))
 for(var a = 0 ; a < steam_lobby_get_member_count() ; a++)
-	draw_text(50,250+a*30,string(a)+") "+ string(steam_lobby_get_member_id(a)))
+  draw_text(50,250+a*30,string(a)+") "+ string(steam_lobby_get_member_id(a)))
 
 

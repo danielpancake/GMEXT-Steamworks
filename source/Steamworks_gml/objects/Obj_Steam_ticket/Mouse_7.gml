@@ -10,14 +10,14 @@ show_debug_message("steam_get_app_ownership_ticket_data: " + string(steam_get_ap
 
 if (auth_ticket_buffer >= 0)
 {
-	buffer_delete(auth_ticket_buffer)
-	auth_ticket_buffer = -1
+  buffer_delete(auth_ticket_buffer)
+  auth_ticket_buffer = -1
 }
 
 if (auth_ticket_handle > 0)
 {
-	steam_user_cancel_auth_ticket(auth_ticket_handle)
-	auth_ticket_handle = 0
+  steam_user_cancel_auth_ticket(auth_ticket_handle)
+  auth_ticket_handle = 0
 }
 
 auth_ticket_buffer = steam_user_get_auth_session_ticket()

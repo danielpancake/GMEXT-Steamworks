@@ -7,7 +7,7 @@ draw_set_valign(valign)
 
 // Draw base sprite (background)
 if(sprite_exists(sprite_index)) {
-	draw_self();
+  draw_self();
 }
 
 // Draw the text (forground)

@@ -9,14 +9,14 @@ update_handles();
 
 var i = 0;
 repeat (gamepad_get_device_count()) {
-	if (gamepad_button_check_pressed(i++, gp_face4)) {
-		show_debug_message("floating show result = " + string(showFloatingKeyboard()));
-		break;
-	}
+  if (gamepad_button_check_pressed(i++, gp_face4)) {
+    show_debug_message("floating show result = " + string(showFloatingKeyboard()));
+    break;
+  }
 }
 
 if (mouse_check_button_pressed(mb_right)) {
-	window_set_cursor(cr_beam);
-	show_debug_message("floating show result = " + string(showFloatingKeyboard()));
-	gc_collect();
+  window_set_cursor(cr_beam);
+  show_debug_message("floating show result = " + string(showFloatingKeyboard()));
+  gc_collect();
 }

@@ -10,9 +10,9 @@ rtt_time = current_time;
 
 enum test_network_packet
 {
-	ping = 10,
-	hello = 11,
-	circleData = 12
+  ping = 10,
+  hello = 11,
+  circleData = 12
 }
 
 alarm[0] = 1

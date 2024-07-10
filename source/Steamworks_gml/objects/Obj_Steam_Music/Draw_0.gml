@@ -11,18 +11,18 @@ var _playback_status = ""
 
 switch (steam_music_get_status()){
 
-	case steam_music_playback_undefined:
-		_playback_status = "steam_music_playback_undefined"
-	break;
-	case steam_music_playback_playing:
-		_playback_status = "steam_music_playback_playing"
-	break;
-	case steam_music_playback_paused:
-		_playback_status = "steam_music_playback_paused"
-	break;
-	case steam_music_playback_idle:
-		_playback_status = "steam_music_playback_idle"
-	break;
+  case steam_music_playback_undefined:
+    _playback_status = "steam_music_playback_undefined"
+  break;
+  case steam_music_playback_playing:
+    _playback_status = "steam_music_playback_playing"
+  break;
+  case steam_music_playback_paused:
+    _playback_status = "steam_music_playback_paused"
+  break;
+  case steam_music_playback_idle:
+    _playback_status = "steam_music_playback_idle"
+  break;
 
 }
 
