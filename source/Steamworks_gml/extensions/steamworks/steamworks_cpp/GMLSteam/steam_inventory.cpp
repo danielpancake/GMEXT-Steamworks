@@ -55,14 +55,16 @@ YYEXPORT void /*const char**/ steam_inventory_result_get_item_property(RValue& R
 
 	static vector<char> tmp;
 	uint32 size = 0;
+
 	if (!API->GetResultItemProperty(inv_result, item_index, prop_name, nullptr, &size))
 	{
 		YYCreateString(&Result, "");
 		return;
 	}
 
-	if (tmp.size() <= size) 
+	if (tmp.size() <= size) {
 		tmp.resize(size + 1);
+	}
 
 	if (!API->GetResultItemProperty(inv_result, item_index, prop_name, tmp.data(), &size))
 	{
@@ -71,6 +73,34 @@ YYEXPORT void /*const char**/ steam_inventory_result_get_item_property(RValue& R
 	}
 
 	YYCreateString(&Result, tmp.data());
+}
+
+YYEXPORT void /*const char**/ steam_inventory_get_definition_property(RValue& Result, CInstance* selfinst, CInstance* otherinst, int argc, RValue* arg)
+{
+	SteamItemDef_t item_def = YYGetInt32(arg, 0);
+	char* prop_name = (char*)YYGetString(arg, 1);
+
+	static vector<char> tmp;
+	uint32 size = 0;
+
+	if (!API->GetItemDefinitionProperty(item_def, prop_name, nullptr, &size))
+	{
+		YYCreateString(&Result, "");
+		return;
+	}
+
+	if (tmp.size() <= size) {
+		tmp.resize(size + 1);
+	}
+
+	if (!API->GetItemDefinitionProperty(item_def, prop_name, tmp.data(), &size))
+	{
+		YYCreateString(&Result, "");
+		return;
+	}
+
+	YYCreateString(&Result, tmp.data());
+	return;
 }
 
 struct steam_inventory_result_item {
